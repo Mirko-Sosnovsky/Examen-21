@@ -1,6 +1,6 @@
 # Examen práctico - Terminal de Expedición Espacial
-# Nombre y apellido:
-# Curso:
+# Nombre y apellido: Mirko Julián Sosnovsky Arana
+# Curso:2º 1ª
 #
 # IMPORTANTE:
 # Resolver el programa siguiendo las etapas indicadas en el README.md.
@@ -12,7 +12,14 @@
 # =========================
 # ETAPA 1 - INICIO
 # =========================
-
+nopi = input("Ingrese su nombre")
+codi = 100
+destinos = ["Luna", "Marte," "Saturno"]
+costo = ["20", "35", "50"]
+fe = ("Finalizar expedición")
+cant.v = 
+print(f"¡Hola {nopi}, bienvenido!")
+print(f"Conbustible disponible = {100} unidades")
 # Crear las variables necesarias.
 # Crear las listas de destinos y costos.
 # Pedir el nombre del piloto.
