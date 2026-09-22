@@ -14,46 +14,56 @@
 # =========================
 nopi = input("Ingrese su nombre ")
 codi = 100
-destinos = ["Luna", "Marte," "Saturno"]
+destinos = ["Luna", "Marte", "Saturno"]
 costo = ["20", "35", "50"]
-fe = ("Finalizar expedición")
+fe = ("Finalizar-expedición")
 print(f"¡Hola {nopi}, bienvenido!")
 print(f"Conbustible disponible = {100} unidades")
-print("Destinos posibles: ", destinos)
-print("Cantidad de viajes realizados: 0")
-ds = input("Seleccione un destino escribiéndolo ")
-if ds == "Luna":
-    print(f"Destino seleccionado: {ds}")
-    print(f"Conbistible necesario: ", costo[0])
-    cs = codi-20
-    print("Conbustible sobrante = {cs}")
-    codi = cs
-    if cs < 0:
-        print("Combustible insuficiente, vuelva a empezar o elija otra ruta")
+ds = ("Sib")
+via = int(0)
+vialu = int(0)
+viama = int(0)
+viasa = int(0)
+while ds != fe:
+    via = vialu+viama+viasa
+    print("Destinos posibles: ", destinos)
+    print(f"Cantidad de viajes realizados = {via}")
+    ds = input("Seleccione un destino escribiéndolo ")
+    if ds == "Luna":
+        print(f"Destino seleccionado: {ds}")
+        print(f"Conbistible necesario: ", costo[0])
+        cs = codi-20
+        print("Conbustible sobrante = {cs}")
+        codi = cs
+        if cs < 0:
+            print("Combustible insuficiente, vuelva a empezar o elija otra ruta")
+        else:
+            print("Viaje exitoso")
+            vialu = vialu+1
+    elif ds == "Marte":
+        print(f"Destino seleccionado: {ds}")
+        print(f"Combustible necesario: ", costo [1])
+        cs = codi-35
+        print(f"combustible disponible: {cs}")
+        codi = cs
+        if cs < 0:
+            print("Combustible insuficiente, vuelva a empezar o elija otra ruta")
+        else:
+            print("Viaje exitoso")
+            viama = viama+1
+    elif ds == "Saturno":
+        print(f"Destino elejido: {ds}")
+        print(f"Combustible necesario: ", costo [2])
+        cs = codi-50
+        print(f"Combustible necesaio = {cs}")
+        codi = cs
+        if cs < 0:
+            print("El combustible no alcanza, vuelva a iniciar o intente con otra ruta")
+        else:
+            print("Viaje exitoso")
+            viasa = viasa+1
     else:
-        print("Viaje exitoso")
-elif ds == "Marte":
-    print(f"Destino seleccionado: {ds}")
-    print(f"Combustible necesario: ", costo [1])
-    cs = codi-35
-    print(f"combustible disponible: {cs}")
-    codi = cs
-    if cs < 0:
-        print("Combustible insuficiente, vuelva a empezar o elija otra ruta")
-    else:
-        print("Viaje exitoso")
-elif ds == "Saturno":
-    print(f"Destino elejido: {ds}")
-    print(f"Combustible necesario: ", costo [2])
-    cs = codi-50
-    print(f"Combustible necesaio = {cs}")
-    codi = cs
-    if cs < 0:
-        print("El combustible no alcanza, vuelva a iniciar o intente con otra ruta")
-    else:
-        print("Viaje exitoso")
-else:
-    print("No se reconoció el destino, chequeá de que esté bien escrito y que la primer letra sea una mayçuscula")
+        print("No se reconoció el destino, chequeá de que esté bien escrito y que la primer letra sea una mayçuscula")
 
 
 # Crear las variables necesarias.
